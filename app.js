@@ -4,7 +4,7 @@ const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
 const cors = require("cors");
-const port = 5000;
+ 
 require("dotenv").config();
 const studentrouter = require("./routes/student_list");
 const Attendencerouter = require("./routes/attendence");
@@ -27,7 +27,7 @@ app.use(cors());
 app.use("/api", studentrouter);
 app.use("/api", Attendencerouter);
 
-
+const port = process.env.PORT || 5000;
 app.listen(port, () => {
   console.log(`Server started on port ${port}`);
 });
