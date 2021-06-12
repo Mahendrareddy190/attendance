@@ -11,7 +11,7 @@ const Attendencerouter = require("./routes/attendence");
  
 // dbcoonection
 mongoose
-  .connect(process.env.DATA, {
+  .connect( "mongodb+srv://mahendra:mahi1432@present.s4kpf.mongodb.net/teacher?retryWrites=true&w=majority", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
